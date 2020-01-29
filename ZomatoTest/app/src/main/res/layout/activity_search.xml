@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="@dimen/dimen_0"
+        android:layout_height="@dimen/dimen_56"
+        android:src="@drawable/zomato_launch_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <!--    <android.support.v7.widget.SearchView-->
+    <!--        android:id="@+id/searchView"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        app:closeIcon="@drawable/ic_clear"-->
+    <!--        app:iconifiedByDefault="false"-->
+    <!--        app:queryBackground="@color/transparent"-->
+    <!--        app:queryHint="@string/filterHint"-->
+    <!--        app:searchIcon="@drawable/ic_search" />-->
+
+    <android.support.v7.widget.SearchView
+        android:visibility="gone"
+        android:id="@+id/searchView"
+        android:layout_width="@dimen/dimen_0"
+        android:layout_height="@dimen/dimen_56"
+        app:iconifiedByDefault="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image"
+        app:queryHint="Search here..." />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycleView"
+        android:background="@color/color_e5e5e5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/searchView">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <EditText
+        android:id="@+id/search_edit_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="searchCall"
+        android:text="Search Chaap"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@+id/button"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image" />
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintStart_toEndOf="@+id/search_edit_text"
+        app:layout_constraintTop_toBottomOf="@id/image" />
+
+</android.support.constraint.ConstraintLayout>

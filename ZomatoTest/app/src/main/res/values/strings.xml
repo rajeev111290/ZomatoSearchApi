@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ZomatoTest</string>
+
+    <string name="network_error">No network connection.</string>
+    <string name="errorString">Something went wrong, Please try again.</string>
+    <string name="enter_something_to_search">Enter something to search.</string>
+    <string name="success">Success</string>
+</resources>
