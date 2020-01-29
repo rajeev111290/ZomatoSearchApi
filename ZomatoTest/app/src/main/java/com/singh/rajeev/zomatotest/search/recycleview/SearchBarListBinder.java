@@ -48,8 +48,10 @@ public class SearchBarListBinder extends DataBinder<SearchBarListBinder.ViewHold
         holder.searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String s) {
-                searchBarModel.setQueryText(s);
-                searchBarModelPublishSubject.onNext(searchBarModel);
+                if (!s.equals(searchBarModel.getQueryText())) {
+                    searchBarModel.setQueryText(s);
+                    searchBarModelPublishSubject.onNext(searchBarModel);
+                }
                 return false;
             }
 
