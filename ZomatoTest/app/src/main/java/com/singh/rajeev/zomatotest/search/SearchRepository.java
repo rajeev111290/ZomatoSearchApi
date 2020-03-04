@@ -16,7 +16,7 @@ public class SearchRepository {
     /*
      * method to call login api
      * */
-    public Single<SearchResponse> executeLogin(SearchBarModel searchBarModel) {
+    Single<SearchResponse> executeLogin(SearchBarModel searchBarModel) {
         return apiCallInterface.listRepos(
                 searchBarModel.getQueryText(),
                 28.682940,

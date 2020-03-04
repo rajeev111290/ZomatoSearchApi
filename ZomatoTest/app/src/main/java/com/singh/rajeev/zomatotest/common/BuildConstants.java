@@ -5,7 +5,7 @@ import com.singh.rajeev.zomatotest.BuildConfig;
 public class BuildConstants {
 
     public static final boolean DEBUG = BuildConfig.DEBUG;
-    public static final String APP_NAME = "Zomato Test";
+    static final String APP_NAME = "Zomato Test";
 
 
     public static final String BASE_URL = "https://developers.zomato.com/api/";

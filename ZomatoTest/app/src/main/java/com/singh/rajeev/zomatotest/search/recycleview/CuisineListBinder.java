@@ -13,14 +13,14 @@ import com.singh.rajeev.zomatotest.search.model.CustomSearchData;
 
 public class CuisineListBinder extends DataBinder<CuisineListBinder.ViewHolder> {
 
-    public CuisineListBinder(DataBindAdapter dataBindAdapter) {
+    CuisineListBinder(DataBindAdapter dataBindAdapter) {
         super(dataBindAdapter);
     }
 
     @Override
     public ViewHolder newViewHolder(ViewGroup parent) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        return new CuisineListBinder.ViewHolder(inflater.inflate(R.layout.cuisine_list_card,
+        return new ViewHolder(inflater.inflate(R.layout.cuisine_list_card,
                 parent, false));
     }
 
@@ -30,11 +30,11 @@ public class CuisineListBinder extends DataBinder<CuisineListBinder.ViewHolder> 
         holder.cuisine.setText(searchResult.getCuisine());
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    static class ViewHolder extends RecyclerView.ViewHolder {
 
         TextView cuisine;
 
-        public ViewHolder(View itemView) {
+        ViewHolder(View itemView) {
             super(itemView);
             cuisine = itemView.findViewById(R.id.cuisine);
         }

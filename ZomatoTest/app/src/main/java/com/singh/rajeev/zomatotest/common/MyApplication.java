@@ -18,10 +18,10 @@ public class MyApplication extends Application {
     public void onCreate() {
         super.onCreate();
 
-        intializeDagger();
+        initializeDagger();
     }
 
-    public void intializeDagger() {
+    public void initializeDagger() {
         component = DaggerApplicationComponent.builder()
                 .applicationModule(new ApplicationModule(this))
                 .build();

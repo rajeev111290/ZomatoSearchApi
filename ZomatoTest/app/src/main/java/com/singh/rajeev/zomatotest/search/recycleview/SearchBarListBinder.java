@@ -29,7 +29,7 @@ public class SearchBarListBinder extends DataBinder<SearchBarListBinder.ViewHold
     PublishSubject<SearchBarModel> searchBarModelPublishSubject;
     SearchBarModel searchBarModel;
 
-    public SearchBarListBinder(DataBindAdapter dataBindAdapter, PublishSubject<SearchBarModel> searchBarModelPublishSubject) {
+    SearchBarListBinder(DataBindAdapter dataBindAdapter, PublishSubject<SearchBarModel> searchBarModelPublishSubject) {
         super(dataBindAdapter);
         this.searchBarModelPublishSubject = searchBarModelPublishSubject;
         searchBarModel = new SearchBarModel("", null, true);
@@ -38,7 +38,7 @@ public class SearchBarListBinder extends DataBinder<SearchBarListBinder.ViewHold
     @Override
     public ViewHolder newViewHolder(ViewGroup parent) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        return new SearchBarListBinder.ViewHolder(inflater.inflate(R.layout.search_bar_list_card,
+        return new ViewHolder(inflater.inflate(R.layout.search_bar_list_card,
                 parent, false));
     }
 
@@ -100,13 +100,13 @@ public class SearchBarListBinder extends DataBinder<SearchBarListBinder.ViewHold
     }
 
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    static class ViewHolder extends RecyclerView.ViewHolder {
 
         SearchView searchView;
         SwitchCompat groupByBtn;
         AppCompatSpinner sortBySpinner;
 
-        public ViewHolder(View itemView) {
+        ViewHolder(View itemView) {
             super(itemView);
             searchView = itemView.findViewById(R.id.searchView);
             groupByBtn = itemView.findViewById(R.id.groupByBtn);

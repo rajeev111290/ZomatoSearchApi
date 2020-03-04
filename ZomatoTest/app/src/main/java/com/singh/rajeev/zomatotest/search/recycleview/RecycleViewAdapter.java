@@ -18,7 +18,7 @@ import java.util.List;
 
 public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.MyViewHolder> {
 
-    List<Integer> searchResults;
+    private List<Integer> searchResults;
 
     public RecycleViewAdapter(List<Integer> searchResults) {
         this.searchResults = searchResults;
@@ -46,11 +46,11 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.
     }
 
 
-    public class MyViewHolder extends RecyclerView.ViewHolder {
+    static class MyViewHolder extends RecyclerView.ViewHolder {
 
         TextView restaurantName;
 
-        public MyViewHolder(View itemView) {
+        MyViewHolder(View itemView) {
             super(itemView);
             restaurantName = itemView.findViewById(R.id.restaurantName);
         }

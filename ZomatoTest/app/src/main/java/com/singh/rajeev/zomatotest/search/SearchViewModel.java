@@ -27,15 +27,15 @@ public class SearchViewModel extends ViewModel {
     SearchBarModel searchModel;
 
 
-    public SearchViewModel(SearchRepository repository) {
+    SearchViewModel(SearchRepository repository) {
         this.repository = repository;
     }
 
-    public MutableLiveData<ApiResponse> searchResponse() {
+    MutableLiveData<ApiResponse> searchResponse() {
         return responseLiveData;
     }
 
-    public void hitSearchApi(SearchBarModel searchBarModel) {
+    void hitSearchApi(SearchBarModel searchBarModel) {
 
         disposables.add(repository.executeLogin(searchBarModel)
                 .subscribeOn(Schedulers.io())

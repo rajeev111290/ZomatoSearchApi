@@ -23,14 +23,16 @@ public class GenericCardDividerBinder extends DataBinder<GenericCardDividerBinde
 
     @Override
     public void bindViewHolder(ViewHolder holder, int position) {
+        holder.divider.setVisibility(View.VISIBLE);
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    static class ViewHolder extends RecyclerView.ViewHolder {
 
         private View divider;
-        public ViewHolder(View itemView) {
+
+        ViewHolder(View itemView) {
             super(itemView);
-            this.divider=itemView.findViewById(R.id.divider);
+            this.divider = itemView.findViewById(R.id.divider);
         }
     }
 }

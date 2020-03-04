@@ -1,8 +1,7 @@
 package com.singh.rajeev.zomatotest.common.base;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.content.Context;
-import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -12,9 +11,8 @@ import android.view.WindowManager;
 
 import com.singh.rajeev.zomatotest.R;
 import com.singh.rajeev.zomatotest.common.LogHelper;
-import com.singh.rajeev.zomatotest.common.MyApplication;
-import com.singh.rajeev.zomatotest.common.dependencyinjection.components.ApplicationComponent;
 
+@SuppressLint("Registered")
 public class BaseActivity extends AppCompatActivity {
 
     private static final String TAG = BaseActivity.class.getSimpleName();

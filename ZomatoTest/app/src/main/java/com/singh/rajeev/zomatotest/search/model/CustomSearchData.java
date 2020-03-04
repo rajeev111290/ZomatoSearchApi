@@ -7,8 +7,8 @@ import com.singh.rajeev.zomatotest.networking.model.SearchResult;
 import java.util.ArrayList;
 
 public class CustomSearchData implements BaseModel {
-    String cuisine;
-    ArrayList<SearchResult> restaurants;
+    private String cuisine;
+    private ArrayList<SearchResult> restaurants;
 
     public CustomSearchData(String cuisine) {
         this.cuisine = cuisine;

@@ -1,16 +1,8 @@
 package com.singh.rajeev.zomatotest.networking;
 
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.singh.rajeev.zomatotest.networking.model.Restaurant;
 import com.singh.rajeev.zomatotest.networking.model.SearchResponse;
-
-import java.util.List;
-
 import io.reactivex.Single;
-import retrofit2.Call;
 import retrofit2.http.GET;
-import retrofit2.http.Path;
 import retrofit2.http.Query;
 
 public interface ZomatoApiInterface {

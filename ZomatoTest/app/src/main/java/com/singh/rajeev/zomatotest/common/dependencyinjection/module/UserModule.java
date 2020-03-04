@@ -63,7 +63,7 @@ public class UserModule {
         httpClient.addInterceptor(chain -> {
             Request original = chain.request();
             Request request = original.newBuilder()
-                    .header("user-key", String.valueOf(BuildConfig.ZAMATO_API_KEY))
+                    .header("user-key", BuildConfig.ZAMATO_API_KEY)
                     .header("Accept", "application/json")
                     .build();
             return chain.proceed(request);
