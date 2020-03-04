@@ -18,14 +18,14 @@ import com.singh.rajeev.zomatotest.networking.model.SearchResult;
 
 public class RestaurantListBinder extends DataBinder<RestaurantListBinder.ViewHolder> {
 
-    public RestaurantListBinder(DataBindAdapter dataBindAdapter) {
+    RestaurantListBinder(DataBindAdapter dataBindAdapter) {
         super(dataBindAdapter);
     }
 
     @Override
     public ViewHolder newViewHolder(ViewGroup parent) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        return new RestaurantListBinder.ViewHolder(inflater.inflate(R.layout.restaurant_list_card,
+        return new ViewHolder(inflater.inflate(R.layout.restaurant_list_card,
                 parent, false));
     }
 
@@ -45,13 +45,13 @@ public class RestaurantListBinder extends DataBinder<RestaurantListBinder.ViewHo
         holder.ratingBar.setRating(Float.parseFloat(restaurant.getUserRating().getAggregateRating()));
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    static class ViewHolder extends RecyclerView.ViewHolder {
 
         ImageView image;
         TextView restaurantName, cost, cuisine, time;
         RatingBar ratingBar;
 
-        public ViewHolder(View itemView) {
+        ViewHolder(View itemView) {
             super(itemView);
             restaurantName = itemView.findViewById(R.id.restaurantName);
             image = itemView.findViewById(R.id.image);
